@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#00a884">
 <title>RUMCHAT</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
@@ -1164,5 +1166,10 @@ function timeAgo(ts){
   return "hier";
 }
 </script>
+      <script>
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('./sw.js');
+}
+      </script>
 </body>
 </html>
